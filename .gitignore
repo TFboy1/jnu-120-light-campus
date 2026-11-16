@@ -1,5 +1,6 @@
 node_modules/
 dist/
+jnu-120-toy.zip
 *.local
 .DS_Store
 .venv-video/

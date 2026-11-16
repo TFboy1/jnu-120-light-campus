@@ -21,6 +21,20 @@ npm run preview   # 通过 HTTP 预览 dist
 
 `dist/` 可部署到静态服务器的根目录或子目录，不支持直接双击 HTML。运行不需要地图 API Key、外部字体、后端或数据库。校史来源链接由用户点击后打开。
 
+## Toy 打包
+
+在 Windows PowerShell 中执行：
+
+```powershell
+npm run build:toy
+```
+
+命令先完成 Vue / TypeScript 检查及生产构建，再将 `dist/` 的内容打包为项目根目录下的 `jnu-120-toy.zip`。ZIP 根目录包含 `index.html`，可在 B 站 Toy 创作者平台上传，也可交给官方 Toy CLI 生成预览。
+
+项目使用 `base: './'`，校徽也通过相对资源路径加载，适配 `/toy/<slug>/` 子目录。校区切换在页面内完成。参考图保存在 `references/reference.png`，发布包包含运行资源和字体许可。
+
+使用 CLI 发布前，通过 `toy history . --json` 和 `toy mylist --json` 核对是否已有对应作品，再选择创建或更新。先生成预览，检查后再确认提交审核。分享正式作品时使用包含 `index.html` 的地址。
+
 ## 探索与演出
 
 - 开场是三地五校区域地图。点击地图标签或底部五校按钮进入对应校园；每次进入都回到该校区白天鸟瞰。

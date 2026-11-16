@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vue-tsc --noEmit && vite build",
+    "build:toy": "npm run build && powershell -NoProfile -Command \"Compress-Archive -Path dist/* -DestinationPath jnu-120-toy.zip -Force\"",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --experimental-strip-types --test tests/*.test.ts"
   },
